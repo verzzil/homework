@@ -41,7 +41,7 @@ class Main{
     public static String getSDNF(String[] funcValues, String[][] trTable, String[] symb, int colums , String res){
         for(int i=0; i<funcValues.length; i++){
             for(int j=0;funcValues[i].equals("1") && j < colums;j++){
-                res += (trTable[i][j].equals("0") ? symb[j+6] : symb[j]);
+                res += trTable[i][j].equals("0") ? symb[j+6] : symb[j];
                 if(j == colums-1){
                     res += " v ";
                 }
@@ -57,7 +57,7 @@ class Main{
                     res+="(";
                     k=0;
                 }
-                res += (trTable[i][j].equals("1") ? symb[j+6] : symb[j]);
+                res += trTable[i][j].equals("1") ? symb[j+6] : symb[j];
                 if(j == colums-1){
                     res += ") ∧ ";
                 }
