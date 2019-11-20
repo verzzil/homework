@@ -45,7 +45,6 @@ public class DNF {
         writeArray(quineTable);
         System.out.println();
 
-
         List core = getCore(quineTable);
         core = removeEquals(core);
         System.out.println("Ядро функции: "+core);
