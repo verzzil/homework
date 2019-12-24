@@ -128,7 +128,7 @@ public class DNF {
 //        [\\S]*[á][\\S]*[ú][\\S]*
         String pattern = "";
         int size = sokrSDNF.size()-1;
-        for(int i = size; i>1;i--) {
+        for(int i = size; i>=0;i--) {
             pattern = getRegExp(sokrSDNF.get(i).toString());
             for(int j = i-1; j>=0; j--){
                 if(regAbsorption(sokrSDNF.get(j).toString(), pattern)){
